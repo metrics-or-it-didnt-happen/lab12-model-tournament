@@ -1,12 +1,12 @@
-# Lab 12: Turniej Modeli — ewaluacja i finał
+# Lab 12: Turniej Modeli - ewaluacja i finał
 
 ## Czy wiesz, że...
 
-W 2014 roku grupa badaczy odkryła, że większość publikacji o predykcji defektów używa accuracy jako głównej metryki — mimo że datasety są niezbalansowane. Po przeliczeniu wyników na AUC-ROC okazało się, że połowa "przełomowych" modeli była nie lepsza niż rzut monetą. Od tamtego czasu każda szanująca się konferencja wymaga raportowania wielu metryk.
+W 2014 roku grupa badaczy odkryła, że większość publikacji o predykcji defektów używa accuracy jako głównej metryki - mimo że datasety są niezbalansowane. Po przeliczeniu wyników na AUC-ROC okazało się, że połowa "przełomowych" modeli była nie lepsza niż rzut monetą. Od tamtego czasu każda szanująca się konferencja wymaga raportowania wielu metryk.
 
 ## Kontekst
 
-Na lab11 wytrenowaliście trzy modele i porównaliście je na zbiorze testowym. Ale jedno porównanie na jednym podziale danych to za mało — wyniki mogą być przypadkowe. Dziś robimy to porządnie: cross-validation, krzywe ROC, i raport końcowy podsumowujący całą podróż od metryk do predykcji.
+Na lab11 wytrenowaliście trzy modele i porównaliście je na zbiorze testowym. Ale jedno porównanie na jednym podziale danych to za mało - wyniki mogą być przypadkowe. Dziś robimy to porządnie: cross-validation, krzywe ROC, i raport końcowy podsumowujący całą podróż od metryk do predykcji.
 
 To ostatnie laboratorium w kursie. Czas zamknąć koło: od ręcznego `git log` na labie 1, przez budowanie datasetu, aż po trenowanie i ewaluację modeli ML.
 
@@ -33,7 +33,7 @@ Na lab11 obliczyliście accuracy i confusion matrix. Dziś idziemy głębiej.
 
 **Krok 1:** Otwórzcie szablon `model_tournament.ipynb` z tego repozytorium.
 
-**Krok 2:** Wczytajcie dataset i wytrenujcie 3 modele (jak na lab11) — w notebooku jest gotowy kod.
+**Krok 2:** Wczytajcie dataset i wytrenujcie 3 modele (jak na lab11) - w notebooku jest gotowy kod.
 
 **Krok 3:** Dla każdego modelu obliczcie dodatkowe metryki:
 
@@ -115,7 +115,7 @@ scoring = {
 | F1 | mean +/- std | mean +/- std | mean +/- std |
 | AUC-ROC | mean +/- std | mean +/- std | mean +/- std |
 
-**Krok 3:** Wizualizacja porównania — boxploty wyników cross-validation:
+**Krok 3:** Wizualizacja porównania - boxploty wyników cross-validation:
 
 ```python
 # Boxploty F1 score z cross-validation
@@ -157,9 +157,9 @@ Czas na podsumowanie całej podróży od lab01 do lab12.
    - Jakie są jego ograniczenia?
 
 5. **Ograniczenia:**
-   - Heurystyka etykietowania — jakie są jej wady?
-   - Mały dataset — ile próbek to "za mało" dla ML?
-   - Generalizowalność — czy model wytrenowany na requests zadziała na flask?
+   - Heurystyka etykietowania - jakie są jej wady?
+   - Mały dataset - ile próbek to "za mało" dla ML?
+   - Generalizowalność - czy model wytrenowany na requests zadziała na flask?
    - Co zrobilibyście inaczej, gdybyście mieli więcej czasu?
 
 6. **Wnioski z kursu:**
@@ -171,8 +171,8 @@ Czas na podsumowanie całej podróży od lab01 do lab12.
 
 W swoim branchu `lab12_nazwisko1_nazwisko2`:
 
-1. **`model_tournament.ipynb`** — wypełniony notebook z ewaluacją i cross-validation
-2. **Raport końcowy** — w notebooku lub w osobnym `report.md`
+1. **`model_tournament.ipynb`** - wypełniony notebook z ewaluacją i cross-validation
+2. **Raport końcowy** - w notebooku lub w osobnym `report.md`
 
 ## Kryteria oceny
 
@@ -185,7 +185,7 @@ W swoim branchu `lab12_nazwisko1_nazwisko2`:
 
 ## FAQ
 
-**P: AUC-ROC wychodzi mi 0.5 — czy model jest zepsuty?**
+**P: AUC-ROC wychodzi mi 0.5 - czy model jest zepsuty?**
 O: AUC = 0.5 oznacza, że model nie jest lepszy niż losowe zgadywanie. Możliwe przyczyny: za mało danych, cechy nie rozróżniają klas, lub model nie trenuje się poprawnie. Sprawdź czy dane są poprawnie przygotowane.
 
 **P: Cross-validation trwa bardzo długo.**
@@ -198,10 +198,10 @@ O: To normalne przy małych datasetach. Każdy fold ma mało próbek, więc wyni
 O: Nie ma jednej "prawdziwej" odpowiedzi. Zależy od tego, co jest ważniejsze: precision (mniej fałszywych alarmów) czy recall (mniej przegapionych bugów). Uzasadnijcie swój wybór.
 
 **P: Czy muszę pisać raport końcowy od zera?**
-O: Nie — możecie go napisać jako komórki Markdown w notebooku. Nie musi być długi — 1-2 strony tekstu z konkretnymi odpowiedziami na 6 punktów.
+O: Nie - możecie go napisać jako komórki Markdown w notebooku. Nie musi być długi - 1-2 strony tekstu z konkretnymi odpowiedziami na 6 punktów.
 
 **P: Co jeśli moje wyniki są "złe" (niskie F1, AUC bliskie 0.5)?**
-O: To nie jest problem — to obserwacja naukowa! Zanotujcie to i wyjaśnijcie dlaczego (mały dataset, słabe cechy, niezbalansowane klasy). Uczciwa analiza słabych wyników jest ważniejsza niż ładne liczby.
+O: To nie jest problem - to obserwacja naukowa! Zanotujcie to i wyjaśnijcie dlaczego (mały dataset, słabe cechy, niezbalansowane klasy). Uczciwa analiza słabych wyników jest ważniejsza niż ładne liczby.
 
 ## Przydatne linki
 
@@ -212,4 +212,4 @@ O: To nie jest problem — to obserwacja naukowa! Zanotujcie to i wyjaśnijcie d
 - [Stratified K-Fold](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html)
 
 ---
-*"Hunger Games, ale dla algorytmów. Niech zwycięży najlepszy model! ...a potem i tak użyjemy Random Forest."* — anonimowy data scientist
+*"Hunger Games, ale dla algorytmów. Niech zwycięży najlepszy model! ...a potem i tak użyjemy Random Forest."* - anonimowy data scientist
